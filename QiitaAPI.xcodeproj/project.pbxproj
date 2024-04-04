@@ -16,6 +16,8 @@
 		BB8021FC2BBD6DCC00997CD8 /* QiitaAPIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8021FB2BBD6DCC00997CD8 /* QiitaAPIUITests.swift */; };
 		BB8021FE2BBD6DCC00997CD8 /* QiitaAPIUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8021FD2BBD6DCC00997CD8 /* QiitaAPIUITestsLaunchTests.swift */; };
 		BB80220B2BBD6E4000997CD8 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB80220A2BBD6E4000997CD8 /* API.swift */; };
+		BB80220F2BBECA5100997CD8 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = BB80220E2BBECA5100997CD8 /* Alamofire */; };
+		BB8022112BBED1C300997CD8 /* QiitaAccessTokenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8022102BBED1C300997CD8 /* QiitaAccessTokenModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,7 @@
 		BB8021FB2BBD6DCC00997CD8 /* QiitaAPIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaAPIUITests.swift; sourceTree = "<group>"; };
 		BB8021FD2BBD6DCC00997CD8 /* QiitaAPIUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaAPIUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		BB80220A2BBD6E4000997CD8 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		BB8022102BBED1C300997CD8 /* QiitaAccessTokenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaAccessTokenModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB80220F2BBECA5100997CD8 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,6 +107,7 @@
 				BB8021DC2BBD6DCA00997CD8 /* SceneDelegate.swift */,
 				BB8021DE2BBD6DCA00997CD8 /* ViewController.swift */,
 				BB80220A2BBD6E4000997CD8 /* API.swift */,
+				BB8022102BBED1C300997CD8 /* QiitaAccessTokenModel.swift */,
 				BB8021E32BBD6DCC00997CD8 /* Assets.xcassets */,
 				BB8021E52BBD6DCC00997CD8 /* LaunchScreen.storyboard */,
 				BB8021E82BBD6DCC00997CD8 /* Info.plist */,
@@ -143,6 +148,9 @@
 			dependencies = (
 			);
 			name = QiitaAPI;
+			packageProductDependencies = (
+				BB80220E2BBECA5100997CD8 /* Alamofire */,
+			);
 			productName = QiitaAPI;
 			productReference = BB8021D72BBD6DCA00997CD8 /* QiitaAPI.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +223,9 @@
 				Base,
 			);
 			mainGroup = BB8021CE2BBD6DCA00997CD8;
+			packageReferences = (
+				BB80220D2BBECA5100997CD8 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = BB8021D82BBD6DCA00997CD8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -257,6 +268,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB8022112BBED1C300997CD8 /* QiitaAccessTokenModel.swift in Sources */,
 				BB8021DF2BBD6DCA00997CD8 /* ViewController.swift in Sources */,
 				BB8021DB2BBD6DCA00997CD8 /* AppDelegate.swift in Sources */,
 				BB80220B2BBD6E4000997CD8 /* API.swift in Sources */,
@@ -597,6 +609,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		BB80220D2BBECA5100997CD8 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.9.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BB80220E2BBECA5100997CD8 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BB80220D2BBECA5100997CD8 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = BB8021CF2BBD6DCA00997CD8 /* Project object */;
 }
