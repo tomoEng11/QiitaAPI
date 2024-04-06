@@ -33,22 +33,28 @@ class ViewController: UIViewController {
 //なんでVCで受け取るのか？なぜURL型で返ってくるとわかるのか？
     func openURL(url : URL) {
 
+        DLog()
+
         guard let queryItem = URLComponents(string: url.absoluteString)?.queryItems,
               let code = queryItem.first(where: { $0.name == "code" })?.value,
               let getState = queryItem.first(where: { $0.name == "state"})?.value,
               getState == API.shared.qiitaState
         else {
+            DLog()
             return
         }
+
+        DLog()
         //アクセストークンを取得
         API.shared.postAccessToken(code: code) { result in
             switch result {
             case .success(let accessToken):
-                print(accessToken)
-                print("aaaa")
+                DLog(accessToken)
+                UserDefaults.standard.qiitaAccessToken = accessToken.token
+                Router.shared.showSecond()
 
             case .failure(let error):
-                print(error)
+                DLog(error)
             }
         }
     }

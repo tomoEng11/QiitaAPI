@@ -32,12 +32,32 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
 
-    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
-        print("aaaaaaa")
+//    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+//        print("aaaaaaa")
+//
+//        Router.shared.vc?.openURL(url: url)
+//        print("openURL")
+//        return true
+//    }
+//    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+//        print("aaaaaaa")
+//        
+//                Router.shared.vc?.openURL(url: url)
+//                print("openURL")
+//                return true
+//    }
 
-        Router.shared.vc?.openURL(url: url)
-        print("openURL")
-        return true
+}
+
+public func DLog(_ obj: Any? = nil, file: String = #file, function: String = #function, line: Int = #line) {
+    var filename: NSString = file as NSString
+    filename = filename.lastPathComponent as NSString
+    let text: String
+    if let obj = obj {
+        text = "[File:\(filename) Func:\(function) Line:\(line)] : \(obj)"
+    } else {
+        text = "[File:\(filename) Func:\(function) Line:\(line)]"
     }
+    print(text)
 }
 
