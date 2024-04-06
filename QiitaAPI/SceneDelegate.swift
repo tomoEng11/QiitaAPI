@@ -9,28 +9,14 @@ import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
-    var window: UIWindow?
-    private var vc: ViewController?
+//    var window: UIWindow?
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let scene = scene as? UIWindowScene else { return }
         let window = UIWindow(windowScene: scene)
-        let vc = ViewController()
-        window.rootViewController = vc
-        self.vc = vc
-        self.window = window
-        window.makeKeyAndVisible()
-    }
+        Router.shared.showRoot(window: window)
 
-    //どうやって考えたのか？
-    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
-
-        guard let vc = self.vc else {
-            return true
-        }
-        vc.openURL(url: url)
-        return true
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

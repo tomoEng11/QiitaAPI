@@ -23,7 +23,7 @@ final class API {
 
     private let clientID = "87951f55fd52f1720f6bb2f352ba19e4b7ba750d"
     private let clientSecret = "938cc46b9db6946ff673dbffa782b40d18c02cfa"
-    //stateてリダイレクト後に返ってくる値じゃないの？
+    //CSRF対策
     let qiitaState = "bb17785d811bb1913ef54b0a7657de780defaa2d"
 
     static let jsonDecoder: JSONDecoder = {
@@ -53,7 +53,8 @@ final class API {
 
     func postAccessToken(code: String, completion: ( (Result<QiitaAccessTokenModel, Error>) -> Void)? = nil) {
         let endpoint = "/access_tokens"
-        guard let url = URL(string: baseURL + endpoint) else { return }
+        guard let url = URL(string: baseURL + endpoint) else { print("bbbb")
+            return  }
         let headers: HTTPHeaders = [
             "Contenttype": "application/json"
         ]

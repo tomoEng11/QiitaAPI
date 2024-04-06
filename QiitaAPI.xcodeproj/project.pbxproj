@@ -18,6 +18,7 @@
 		BB80220B2BBD6E4000997CD8 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB80220A2BBD6E4000997CD8 /* API.swift */; };
 		BB80220F2BBECA5100997CD8 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = BB80220E2BBECA5100997CD8 /* Alamofire */; };
 		BB8022112BBED1C300997CD8 /* QiitaAccessTokenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8022102BBED1C300997CD8 /* QiitaAccessTokenModel.swift */; };
+		BB8022152BC0EC1B00997CD8 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8022142BC0EC1B00997CD8 /* Router.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		BB8021FD2BBD6DCC00997CD8 /* QiitaAPIUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaAPIUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		BB80220A2BBD6E4000997CD8 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		BB8022102BBED1C300997CD8 /* QiitaAccessTokenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaAccessTokenModel.swift; sourceTree = "<group>"; };
+		BB8022142BC0EC1B00997CD8 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 				BB8021DE2BBD6DCA00997CD8 /* ViewController.swift */,
 				BB80220A2BBD6E4000997CD8 /* API.swift */,
 				BB8022102BBED1C300997CD8 /* QiitaAccessTokenModel.swift */,
+				BB8022142BC0EC1B00997CD8 /* Router.swift */,
 				BB8021E32BBD6DCC00997CD8 /* Assets.xcassets */,
 				BB8021E52BBD6DCC00997CD8 /* LaunchScreen.storyboard */,
 				BB8021E82BBD6DCC00997CD8 /* Info.plist */,
@@ -272,6 +275,7 @@
 				BB8021DF2BBD6DCA00997CD8 /* ViewController.swift in Sources */,
 				BB8021DB2BBD6DCA00997CD8 /* AppDelegate.swift in Sources */,
 				BB80220B2BBD6E4000997CD8 /* API.swift in Sources */,
+				BB8022152BC0EC1B00997CD8 /* Router.swift in Sources */,
 				BB8021DD2BBD6DCA00997CD8 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
