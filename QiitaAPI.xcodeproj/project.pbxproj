@@ -109,7 +109,6 @@
 		BB8021D92BBD6DCA00997CD8 /* QiitaAPI */ = {
 			isa = PBXGroup;
 			children = (
-				BB8022192BC182EB00997CD8 /* Extension */,
 				BB8021DA2BBD6DCA00997CD8 /* AppDelegate.swift */,
 				BB8021DC2BBD6DCA00997CD8 /* SceneDelegate.swift */,
 				BB8021DE2BBD6DCA00997CD8 /* ViewController.swift */,
@@ -117,6 +116,7 @@
 				BB80220A2BBD6E4000997CD8 /* API.swift */,
 				BB8022102BBED1C300997CD8 /* QiitaAccessTokenModel.swift */,
 				BB8022142BC0EC1B00997CD8 /* Router.swift */,
+				BB8022192BC182EB00997CD8 /* Extension */,
 				BB8021E32BBD6DCC00997CD8 /* Assets.xcassets */,
 				BB8021E52BBD6DCC00997CD8 /* LaunchScreen.storyboard */,
 				BB8021E82BBD6DCC00997CD8 /* Info.plist */,

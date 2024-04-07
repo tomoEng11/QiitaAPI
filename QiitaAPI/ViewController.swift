@@ -51,8 +51,7 @@ class ViewController: UIViewController {
             case .success(let accessToken):
                 DLog(accessToken)
                 UserDefaults.standard.qiitaAccessToken = accessToken.token
-                Router.shared.showSecond()
-
+                Router.shared.showSecond(from: self)
             case .failure(let error):
                 DLog(error)
             }

@@ -16,15 +16,25 @@ final class Router {
 
     func showRoot(window: UIWindow) {
         let vc = ViewController()
-        window.rootViewController = vc
+        let nav = UINavigationController(rootViewController: vc)
+        window.rootViewController = nav
         window.makeKeyAndVisible()
         self.vc = vc
         self.window = window
     }
 
-    func showSecond() {
-        let vc = SecondViewController()
-        let nav = UINavigationController()
-        nav.pushViewController(vc, animated: true)
+    func showSecond(from: UIViewController) {
+        let nextVC = SecondViewController()
+        show(from: from, next: nextVC, animated: true)
+    }
+}
+
+private extension Router {
+    func show(from: UIViewController, next: UIViewController, animated: Bool = true) {
+        if let nav = from.navigationController {
+            nav.pushViewController(next, animated: animated)
+        } else {
+            from.present(next, animated: animated, completion: nil)
+        }
     }
 }
