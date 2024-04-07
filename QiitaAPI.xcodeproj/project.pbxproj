@@ -21,6 +21,7 @@
 		BB8022152BC0EC1B00997CD8 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8022142BC0EC1B00997CD8 /* Router.swift */; };
 		BB80221B2BC1830800997CD8 /* UseDefaults+.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB80221A2BC1830800997CD8 /* UseDefaults+.swift */; };
 		BB80221D2BC185A700997CD8 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB80221C2BC185A700997CD8 /* SecondViewController.swift */; };
+		BB8022212BC23CBC00997CD8 /* QiitaItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8022202BC23CBC00997CD8 /* QiitaItemModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		BB8022142BC0EC1B00997CD8 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		BB80221A2BC1830800997CD8 /* UseDefaults+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UseDefaults+.swift"; sourceTree = SOURCE_ROOT; };
 		BB80221C2BC185A700997CD8 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		BB8022202BC23CBC00997CD8 /* QiitaItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaItemModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 				BB80220A2BBD6E4000997CD8 /* API.swift */,
 				BB8022102BBED1C300997CD8 /* QiitaAccessTokenModel.swift */,
 				BB8022142BC0EC1B00997CD8 /* Router.swift */,
+				BB8022202BC23CBC00997CD8 /* QiitaItemModel.swift */,
 				BB8022192BC182EB00997CD8 /* Extension */,
 				BB8021E32BBD6DCC00997CD8 /* Assets.xcassets */,
 				BB8021E52BBD6DCC00997CD8 /* LaunchScreen.storyboard */,
@@ -288,6 +291,7 @@
 				BB80221D2BC185A700997CD8 /* SecondViewController.swift in Sources */,
 				BB8022112BBED1C300997CD8 /* QiitaAccessTokenModel.swift in Sources */,
 				BB80221B2BC1830800997CD8 /* UseDefaults+.swift in Sources */,
+				BB8022212BC23CBC00997CD8 /* QiitaItemModel.swift in Sources */,
 				BB8021DF2BBD6DCA00997CD8 /* ViewController.swift in Sources */,
 				BB8021DB2BBD6DCA00997CD8 /* AppDelegate.swift in Sources */,
 				BB80220B2BBD6E4000997CD8 /* API.swift in Sources */,

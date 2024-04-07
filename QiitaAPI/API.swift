@@ -76,8 +76,32 @@ final class API {
                 completion?(.failure(error))
             }
         }
+    }
 
+    func getItems(completion: (Result<[QiitaItemModel], APIError>)-> Void?)  {
+        let endpoint = "/authenticated_user/items"
+        guard let url = URL(string: baseURL + endpoint), !UserDefaults.standard.qiitaAccessToken.isEmpty else {
+            completion(.failure(APIError.getItems))
+            return }
 
+        let headers: HTTPHeaders = [
+            "Authorization": "Bearer \(UserDefaults.standard.qiitaAccessToken)"
+        ]
+
+        let parameters = [
+            "page": 1,
+            "per_page": 10
+        ]
+
+        AF.request(url, method: .get, parameters: parameters, headers: headers).responseDecodable(of: [QiitaItemModel].self) { (response) in
+
+            switch response.result {
+            case.success(let items):
+                DLog(items)
+            case.failure(let error):
+                DLog(error)
+            }
+        }
     }
 
     
