@@ -11,8 +11,7 @@ class SecondViewController: UIViewController {
 
     private weak var tableView: UITableView! {
         didSet {
-            tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
-        }
+            tableView.register(CustomTableViewCell.self, forCellReuseIdentifier: CustomTableViewCell.reuseID)        }
     }
 
     private var qiitaItems: [QiitaItemModel] = []
@@ -29,10 +28,10 @@ class SecondViewController: UIViewController {
 
         DLog()
         API.shared.getItems { result in
+            print(result)
             switch result {
             case.success(let items):
                 self.qiitaItems = items
-                DLog(qiitaItems)
                 DispatchQueue.main.async {
                     self.tableView?.reloadData()
                 }
@@ -49,8 +48,9 @@ extension SecondViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = qiitaItems[indexPath.row].title
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CustomTableViewCell
+        cell.titleLabel.text = qiitaItems[indexPath.row].title
+        cell.urlLabel.text = qiitaItems[indexPath.row].url
         return cell
     }
 }
