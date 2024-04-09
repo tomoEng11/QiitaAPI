@@ -34,7 +34,6 @@ final class API {
     }()
 
 
-
     enum  URLParameterName: String {
         case clientID = "client_id"
         case clientSecret = "client_secret"
@@ -78,7 +77,7 @@ final class API {
         }
     }
 
-    func getItems(completion: (Result<[QiitaItemModel], APIError>)-> Void?)  {
+    func getItems(completion: @escaping (Result<[QiitaItemModel], APIError>)-> Void?)  {
         let endpoint = "/authenticated_user/items"
         guard let url = URL(string: baseURL + endpoint), !UserDefaults.standard.qiitaAccessToken.isEmpty else {
             completion(.failure(APIError.getItems))
@@ -97,17 +96,10 @@ final class API {
 
             switch response.result {
             case.success(let items):
-                DLog(items)
+                completion(.success(items))
             case.failure(let error):
-                DLog(error)
+                completion(.failure(APIError.getItems))
             }
         }
     }
-
-    
-
-
-
-
-
 }

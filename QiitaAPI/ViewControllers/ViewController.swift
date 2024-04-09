@@ -9,7 +9,6 @@ import UIKit
 
 class ViewController: UIViewController {
 
-
     private let button: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -30,11 +29,10 @@ class ViewController: UIViewController {
             button.centerXAnchor.constraint(equalTo: view.centerXAnchor)
         ])
     }
-//なんでVCで受け取るのか？なぜURL型で返ってくるとわかるのか？
+
     func openURL(url : URL) {
 
         DLog()
-
         guard let queryItem = URLComponents(string: url.absoluteString)?.queryItems,
               let code = queryItem.first(where: { $0.name == "code" })?.value,
               let getState = queryItem.first(where: { $0.name == "state"})?.value,

@@ -113,18 +113,12 @@
 		BB8021D92BBD6DCA00997CD8 /* QiitaAPI */ = {
 			isa = PBXGroup;
 			children = (
-				BB8021DA2BBD6DCA00997CD8 /* AppDelegate.swift */,
-				BB8021DC2BBD6DCA00997CD8 /* SceneDelegate.swift */,
-				BB8021DE2BBD6DCA00997CD8 /* ViewController.swift */,
-				BB80221C2BC185A700997CD8 /* SecondViewController.swift */,
-				BB80220A2BBD6E4000997CD8 /* API.swift */,
-				BB8022102BBED1C300997CD8 /* QiitaAccessTokenModel.swift */,
-				BB8022142BC0EC1B00997CD8 /* Router.swift */,
-				BB8022222BC29A5900997CD8 /* CustomTableViewCell.swift */,
-				BB8022202BC23CBC00997CD8 /* QiitaItemModel.swift */,
+				BB80222A2BC561DF00997CD8 /* Support */,
+				BB8022262BC55BC500997CD8 /* ViewControllers */,
+				BB8022272BC55F7500997CD8 /* Models */,
+				BB8022292BC55FCD00997CD8 /* Utilities */,
+				BB8022282BC55F9100997CD8 /* Cell */,
 				BB8022192BC182EB00997CD8 /* Extension */,
-				BB8021E32BBD6DCC00997CD8 /* Assets.xcassets */,
-				BB8021E52BBD6DCC00997CD8 /* LaunchScreen.storyboard */,
 				BB8021E82BBD6DCC00997CD8 /* Info.plist */,
 			);
 			path = QiitaAPI;
@@ -153,6 +147,52 @@
 				BB80221A2BC1830800997CD8 /* UseDefaults+.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		BB8022262BC55BC500997CD8 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				BB8021DE2BBD6DCA00997CD8 /* ViewController.swift */,
+				BB80221C2BC185A700997CD8 /* SecondViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		BB8022272BC55F7500997CD8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BB8022102BBED1C300997CD8 /* QiitaAccessTokenModel.swift */,
+				BB8022202BC23CBC00997CD8 /* QiitaItemModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BB8022282BC55F9100997CD8 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				BB8022222BC29A5900997CD8 /* CustomTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		BB8022292BC55FCD00997CD8 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				BB80220A2BBD6E4000997CD8 /* API.swift */,
+				BB8022142BC0EC1B00997CD8 /* Router.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		BB80222A2BC561DF00997CD8 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				BB8021DA2BBD6DCA00997CD8 /* AppDelegate.swift */,
+				BB8021DC2BBD6DCA00997CD8 /* SceneDelegate.swift */,
+				BB8021E32BBD6DCC00997CD8 /* Assets.xcassets */,
+				BB8021E52BBD6DCC00997CD8 /* LaunchScreen.storyboard */,
+			);
+			path = Support;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
